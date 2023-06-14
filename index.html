@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunify</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <!-- Track details -->
+            <div class="details">
+                <div class="now-playing">PLAYING 1 OF 3</div> <!-- Current track information -->
+                <div class="track-art"></div> <!-- Track artwork -->
+                <div class="track-name">Track Name</div> <!-- Track name -->
+                <div class="track-artist">Track Artist</div> <!-- Track artist -->
+            </div>
+ 
+            <!-- Seek slider and current duration -->
+            <div class="slider_container">
+                <div class="current-time">00:00</div> <!-- Current track time -->
+                 <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()"> <!-- Seek slider input -->
+                 <div class="total-duration">00:00</div> <!-- Total track duration -->
+            </div>
+ 
+            <!-- Volume slider -->
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i> <!-- Volume down icon -->
+                 <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()"> <!-- Volume slider input -->
+                 <i class="fa fa-volume-up"></i> <!-- Volume up icon -->
+            </div>
+ 
+            <!-- Player control buttons -->
+            <div class="buttons">
+                <div class="random-track" onclick="randomTrack()">
+                    <i class="fas fa-random fa-2x" title="random"></i> <!-- Random track button -->
+                </div>
+                <div class="prev-track" onclick="prevTrack()">
+                     <i class="fa fa-step-backward fa-2x"></i> <!-- Previous track button -->
+                 </div>
+                 <div class="playpause-track" onclick="playpauseTrack()">
+                     <i class="fa fa-play-circle fa-5x"></i> <!-- Play/pause track button -->
+                 </div>
+                 <div class="next-track" onclick="nextTrack()">
+                     <i class="fa fa-step-forward fa-2x"></i> <!-- Next track button -->
+                 </div>
+                 <div class="repeat-track" onclick="repeatTrack()">
+                     <i class="fa fa-repeat fa-2x" title="repeat"></i> <!-- Repeat track button -->
+                 </div>
+            </div>
+ 
+             <div id="wave">
+                 <span class="stroke"></span> <!-- Wave animation -->
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+                 <span class="stroke"></span>
+             </div>  
+        </div>
+    </div>
+ </body>
+</html>
